@@ -1,0 +1,22 @@
+<table class="table table-bordered table-hover">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Number of Pages</th>
+            <th>Published Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td> {{ book.title }} </td>
+                <td> {{ book.author }} </td>
+                <td> {{ book.numberOfPages }} </td>
+                <td> {{ book.publishedAt|date:'longDate' }} </td>
+                <td> <input type="submit" class="btn btn-warning" value="Edit"(click)="editBook(book.id)"></td>
+                <td> <input type="submit" class="btn btn-danger" value="Delete"(click)="deleteBook(book)"></td>
+            </tr>
+        </tbody>
+        <input class="btn btn-primary" routerLink="/newBook" value="New book">
+       
+</table>

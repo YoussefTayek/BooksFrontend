@@ -1,0 +1,23 @@
+<form #form= "ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" name="title" [(ngModel)]="book.title" class="form-control" placeholder="title">
+    </div>
+
+    <div class="form-group">
+        <label>Author</label>
+        <input type="text" name="author" [(ngModel)]="book.author" class="form-control" placeholder="author">
+    </div>
+      
+    <div class="form-group">
+        <label>Number of Pages</label>
+        <input type="text" name="numberOfPages" [(ngModel)]="book.numberOfPages" class="form-control" placeholder="number of pages">
+    </div>
+
+    <div class="form-group">
+        <label>Published Date</label>
+        <input type="text" name="publishedDate" [(ngModel)]="book.publishedAt" class="form-control" placeholder="published date">
+    </div>
+    <input type="submit" class="btn btn-outline-success mr-2" value="Save book">
+    <input class="btn btn-primary" routerLink="/" value="Back to List">
+</form>
